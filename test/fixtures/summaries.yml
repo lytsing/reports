@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  completed_at: 2013-07-29
+  body: MyText
+  next: MyText
+  rate: 9.99
+  user_id: 
+
+two:
+  completed_at: 2013-07-29
+  body: MyText
+  next: MyText
+  rate: 9.99
+  user_id: 

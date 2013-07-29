@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Completed at:</strong>
+  <%= @summary.completed_at %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @summary.body %>
+</p>
+
+<p>
+  <strong>Next:</strong>
+  <%= @summary.next %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @summary.rate %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @summary.user %>
+</p>
+
+<%= link_to 'Edit', edit_summary_path(@summary) %> |
+<%= link_to 'Back', summaries_path %>
