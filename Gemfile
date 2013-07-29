@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'bootstrap-sass'
 
+gem 'simple_form', '>= 3.0.0.rc'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
