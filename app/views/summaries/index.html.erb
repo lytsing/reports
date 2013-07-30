@@ -1,35 +1,13 @@
-<h1>Listing summaries</h1>
+<h1>周报</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Completed at</th>
-      <th>Body</th>
-      <th>Next</th>
-      <th>Rate</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @summaries.each do |summary| %>
-      <tr>
-        <td><%= summary.completed_at %></td>
-        <td><%= summary.body %></td>
-        <td><%= summary.next %></td>
-        <td><%= summary.rate %></td>
-        <td><%= summary.user %></td>
-        <td><%= link_to 'Show', summary %></td>
-        <td><%= link_to 'Edit', edit_summary_path(summary) %></td>
-        <td><%= link_to 'Destroy', summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<% @summaries.each do |summary| %>
+  <div class="row well">
+    <p>完成时间：<%= summary.completed_at %></p>
+    <p>计划内容<%= summary.body %></p>
+    <p>下一步解决方案 <%= summary.next %></p>
+    <p>完成率％：<%= summary.rate %></p>
+    <p><%= link_to 'Show', summary %> | <%= link_to 'Edit', edit_summary_path(summary) %> | <%= link_to 'Destroy', summary, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
 
 <%= link_to 'New Summary', new_summary_path %>
