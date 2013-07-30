@@ -1,4 +1,5 @@
 Reports::Application.routes.draw do
+  get "home/more"
   resources :summaries
 
   get "home/index"
