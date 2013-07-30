@@ -5,7 +5,7 @@ class SummariesController < ApplicationController
   # GET /summaries
   # GET /summaries.json
   def index
-    @summaries = Summary.all
+    @summaries = Summary.page(params[:page]).per(4)
   end
 
   # GET /summaries/1
