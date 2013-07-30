@@ -1,15 +1,22 @@
 <%= simple_form_for(@summary, html: {class: 'form-horizontal well' }) do |f| %>
-  <%= f.error_notification %>
+  
+  <%- if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= f.error_notification %>
+    </div>
+  <%- end %>
 
   <div class="form-inputs">
-    <%= f.input :completed_at %>
-    <%= f.input :body %>
-    <%= f.input :next %>
-    <%= f.input :rate %>
-    <%= f.association :user %>
+    <%= f.input :completed_at, label: '完成时间' %>
+    <%= f.input :body, as: :text, label: '计划内容' %>
+    <%= f.input :next, as: :text, label: '下一步解决方案' %>
+    <%= f.input :rate, label: '完成率％' %>
+    <!-- <%= f.association :user %> -->
+    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :class => "btn btn-primary" %>
+    <%= f.button :submit, '提交', :class => "btn btn-primary" %>
   </div>
 <% end %>

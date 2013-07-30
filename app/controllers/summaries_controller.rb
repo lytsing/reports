@@ -1,10 +1,11 @@
 class SummariesController < ApplicationController
   before_action :set_summary, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, :except => [:show, :index]
 
   # GET /summaries
   # GET /summaries.json
   def index
-    @summaries = Summary.all
+    @summaries = @current_user.summaries
   end
 
   # GET /summaries/1

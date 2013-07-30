@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Work Reports" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Week reports" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -30,5 +29,17 @@
         </div>
       </div>
     </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright 2011-2013 <a href="https://www.iboxpay.com">iboxpay.com</a></p>
+        <ul class="footer-links">
+          <li>Developed by <a href="http://blog.lytsing.org">Lytsing Huang</a></li>
+          <li class="muted">·</li>
+          <li><a href="https://github.com/lytsing/">Lytsing @ GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

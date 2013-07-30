@@ -11,3 +11,26 @@
  *= require_self
  *= require_tree .
  */
+
+footer { margin-top: 100px; }
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+.login-wrapper {
+    left: 50%;
+    margin: auto auto auto -230px;
+    position: absolute;
+    top: 20%;
+    width: 460px;
+}
+
