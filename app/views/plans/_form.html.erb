@@ -2,7 +2,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :plan_at, label: '计划时间'%>
+    <%= f.input :plan_at, as: :string, :id => "datepicker", input_html: { 'data-behaviour' => 'datepicker', value: Date.today }, label: '计划时间' %>
+    
     <%= f.input :body,  as: :text, input_html: { :rows => 5, :placeholder => "Enter some text.", :class => "span6" }, label: '计划内容'%>
     <%= f.input :actions, label: '执行人' %>
     <%= f.input :assist_resource, label: '协助部门/资源' %>
@@ -15,3 +16,8 @@
     <%= f.button :submit, '提交', :class => "btn btn-primary" %>    
   </div>
 <% end %>
+
+
+<script type="text/javascript">
+  $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});  
+</script>

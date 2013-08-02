@@ -8,7 +8,7 @@
   <%- end %>
 
   <div class="form-inputs">
-    <%= f.input :completed_at, label: '完成时间' %>
+        <%= f.input :completed_at, as: :string, :id => "datepicker", input_html: { 'data-behaviour' => 'datepicker', value: Date.today }, label: '完成时间' %>
     <%= f.input :body, as: :text, input_html: { :rows => 5, :placeholder => "Enter some text.", :class => "span6" }, label: '计划内容' %>
     <%= f.input :next, as: :text, input_html: { :rows => 5, :placeholder => "Enter some text.", :class => "span6" }, label: '下一步解决方案' %>
     <%= f.input :rate, label: '完成率％' %>
@@ -18,3 +18,7 @@
     <%= f.button :submit, '提交', :class => "btn btn-primary" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $('[data-behaviour~=datepicker]').datepicker({format: 'yyyy-mm-dd'});  
+</script>
