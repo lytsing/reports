@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  body: MyText
+  plan_at: 2013-08-02
+  actions: MyString
+  assist_resource: MyText
+  company_resource: MyText
+  complete: MyText
+  user_id: 
+
+two:
+  body: MyText
+  plan_at: 2013-08-02
+  actions: MyString
+  assist_resource: MyText
+  company_resource: MyText
+  complete: MyText
+  user_id: 

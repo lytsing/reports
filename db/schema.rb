@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130729153106) do
+ActiveRecord::Schema.define(version: 20130802144318) do
+
+  create_table "plans", force: true do |t|
+    t.text     "body"
+    t.date     "plan_at"
+    t.string   "actions"
+    t.text     "assist_resource"
+    t.text     "company_resource"
+    t.text     "complete"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "plans", ["user_id"], name: "index_plans_on_user_id"
 
   create_table "summaries", force: true do |t|
     t.date     "completed_at"

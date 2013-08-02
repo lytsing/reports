@@ -1,4 +1,6 @@
 Reports::Application.routes.draw do
+  resources :plans
+
   get "home/more"
   resources :summaries
 

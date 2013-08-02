@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @plan.body %>
+</p>
+
+<p>
+  <strong>Plan at:</strong>
+  <%= @plan.plan_at %>
+</p>
+
+<p>
+  <strong>Actions:</strong>
+  <%= @plan.actions %>
+</p>
+
+<p>
+  <strong>Assist resource:</strong>
+  <%= @plan.assist_resource %>
+</p>
+
+<p>
+  <strong>Company resource:</strong>
+  <%= @plan.company_resource %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @plan.complete %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @plan.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>
