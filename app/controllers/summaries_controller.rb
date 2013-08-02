@@ -5,7 +5,7 @@ class SummariesController < ApplicationController
   # GET /summaries
   # GET /summaries.json
   def index
-    @summaries = Summary.page(params[:page]).per(4)
+    @summaries = current_user.summaries.page(params[:page]).per(4)
   end
 
   # GET /summaries/1
@@ -16,6 +16,7 @@ class SummariesController < ApplicationController
   # GET /summaries/new
   def new
     @summary = Summary.new
+    
   end
 
   # GET /summaries/1/edit
@@ -26,6 +27,7 @@ class SummariesController < ApplicationController
   # POST /summaries.json
   def create
     @summary = Summary.new(summary_params)
+    @summary.user = current_user
 
     respond_to do |format|
       if @summary.save
@@ -70,6 +72,6 @@ class SummariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def summary_params
-      params.require(:summary).permit(:completed_at, :body, :next, :rate, :user_id)
+      params.require(:summary).permit(:completed_at, :body, :next, :rate)
     end
 end
