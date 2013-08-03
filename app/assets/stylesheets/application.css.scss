@@ -12,6 +12,8 @@
  *= require_self
  *= require_tree .
  */
+ 
+ @import "bootstrap_and_overrides";
 
 footer { margin-top: 50px; }
 .footer-links {
