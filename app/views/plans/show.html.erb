@@ -1,39 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @plan.body %>
-</p>
+<table class="table table-bordered table-hover table-striped">
+  <thead class="header">
+    <tr>
+      <th>计划内容</th>
+      <th>计划时间</th>
+      <th>执行人</th>
+      <th>协助部门/资源</th>
+      <th>完成标准</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @plan.body %></td>
+        <td><%= @plan.plan_at %></td>
+        <td><%= @plan.actions %></td>
+        <td><%= @plan.assist_resource %></td>
+        <td><%= @plan.company_resource %></td>
+        <td><%= @plan.complete %></td>
+        <td> <i class="icon-edit"></i><%= link_to 'Edit', edit_plan_path(@plan) %> &nbsp;<i class="icon-trash"></i> <%= link_to 'Destroy', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  </tbody>
+</table>
 
-<p>
-  <strong>Plan at:</strong>
-  <%= @plan.plan_at %>
-</p>
+<br>
 
-<p>
-  <strong>Actions:</strong>
-  <%= @plan.actions %>
-</p>
 
-<p>
-  <strong>Assist resource:</strong>
-  <%= @plan.assist_resource %>
-</p>
-
-<p>
-  <strong>Company resource:</strong>
-  <%= @plan.company_resource %>
-</p>
-
-<p>
-  <strong>Complete:</strong>
-  <%= @plan.complete %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @plan.user.email %>
-</p>
-
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>
+<i class="icon-arrow-left"></i><%= link_to 'Back', plans_path %> &nbsp;&nbsp;
+<i class="icon-pencil"></i><%= link_to 'New Plan', new_plan_path %>
