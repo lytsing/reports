@@ -9,10 +9,16 @@ gem 'sqlite3'
 
 gem 'bootstrap-sass'
 gem 'simple_form', '>= 3.0.0.rc'
-gem 'devise'
 gem 'protected_attributes'
 gem 'kaminari'
 gem 'bootstrap-datepicker-rails'
+
+gem 'devise',              github: 'plataformatec/devise'
+gem 'responders',          github: 'plataformatec/responders'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'ransack',             github: 'ernie/ransack', branch: 'rails-4'
+gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
+gem 'formtastic',          github: 'justinfrench/formtastic'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

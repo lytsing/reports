@@ -1,4 +1,5 @@
 Reports::Application.routes.draw do
+  ActiveAdmin.routes(self)
   resources :plans
 
   get "home/more"

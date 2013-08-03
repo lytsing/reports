@@ -1,6 +1,7 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
-  #before_filter :authenticate_user!  
+  
+  before_filter :authenticate_user!
 
   # GET /plans
   # GET /plans.json
@@ -71,6 +72,6 @@ class PlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_params
-      params.require(:plan).permit(:body, :plan_at, :actions, :assist_resource, :company_resource, :complete, :user_id)
+      params.require(:plan).permit(:body, :plan_at, :actions, :assist_resource, :company_resource, :complete)
     end
 end
